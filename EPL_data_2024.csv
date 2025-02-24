@@ -1,0 +1,523 @@
+date,time,day,team,opponent,gf,ga,xg,xga,venue,result,season
+2024-08-16,19:00:00,Friday,Manchester United,Fulham,1,0,2.04268,0.418711,home,W,2024
+2024-08-16,19:00:00,Friday,Fulham,Manchester United,0,1,0.418711,2.04268,away,L,2024
+2024-08-17,11:30:00,Saturday,Ipswich,Liverpool,0,2,0.342601,3.92906,home,L,2024
+2024-08-17,11:30:00,Saturday,Liverpool,Ipswich,2,0,3.92906,0.342601,away,W,2024
+2024-08-17,14:00:00,Saturday,Arsenal,Wolverhampton Wanderers,2,0,1.6283,0.575835,home,W,2024
+2024-08-17,14:00:00,Saturday,Wolverhampton Wanderers,Arsenal,0,2,0.575835,1.6283,away,L,2024
+2024-08-17,14:00:00,Saturday,Everton,Brighton,0,3,0.405325,1.79083,home,L,2024
+2024-08-17,14:00:00,Saturday,Brighton,Everton,3,0,1.79083,0.405325,away,W,2024
+2024-08-17,14:00:00,Saturday,Newcastle United,Southampton,1,0,0.433489,1.95483,home,W,2024
+2024-08-17,14:00:00,Saturday,Southampton,Newcastle United,0,1,1.95483,0.433489,away,L,2024
+2024-08-17,14:00:00,Saturday,Nottingham Forest,Bournemouth,1,1,1.24405,1.90915,home,D,2024
+2024-08-17,14:00:00,Saturday,Bournemouth,Nottingham Forest,1,1,1.90915,1.24405,away,D,2024
+2024-08-17,16:30:00,Saturday,West Ham,Aston Villa,1,2,2.8047,2.6703,home,L,2024
+2024-08-17,16:30:00,Saturday,Aston Villa,West Ham,2,1,2.6703,2.8047,away,W,2024
+2024-08-18,13:00:00,Sunday,Brentford,Crystal Palace,2,1,1.38064,1.14757,home,W,2024
+2024-08-18,13:00:00,Sunday,Crystal Palace,Brentford,1,2,1.14757,1.38064,away,L,2024
+2024-08-18,15:30:00,Sunday,Chelsea,Manchester City,0,2,1.06123,1.18038,home,L,2024
+2024-08-18,15:30:00,Sunday,Manchester City,Chelsea,2,0,1.18038,1.06123,away,W,2024
+2024-08-19,19:00:00,Monday,Leicester,Tottenham,1,1,1.02614,1.40775,home,D,2024
+2024-08-19,19:00:00,Monday,Tottenham,Leicester,1,1,1.40775,1.02614,away,D,2024
+2024-08-24,11:30:00,Saturday,Brighton,Manchester United,2,1,2.14153,1.28556,home,W,2024
+2024-08-24,11:30:00,Saturday,Manchester United,Brighton,1,2,1.28556,2.14153,away,L,2024
+2024-08-24,14:00:00,Saturday,Crystal Palace,West Ham,0,2,1.3761,1.53421,home,L,2024
+2024-08-24,14:00:00,Saturday,West Ham,Crystal Palace,2,0,1.53421,1.3761,away,W,2024
+2024-08-24,14:00:00,Saturday,Fulham,Leicester,2,1,1.96218,0.857005,home,W,2024
+2024-08-24,14:00:00,Saturday,Leicester,Fulham,1,2,0.857005,1.96218,away,L,2024
+2024-08-24,14:00:00,Saturday,Manchester City,Ipswich,4,1,3.07818,0.479999,home,W,2024
+2024-08-24,14:00:00,Saturday,Ipswich,Manchester City,1,4,0.479999,3.07818,away,L,2024
+2024-08-24,14:00:00,Saturday,Southampton,Nottingham Forest,0,1,0.214952,2.86475,home,L,2024
+2024-08-24,14:00:00,Saturday,Nottingham Forest,Southampton,1,0,2.86475,0.214952,away,W,2024
+2024-08-24,14:00:00,Saturday,Tottenham,Everton,4,0,2.61143,0.648869,home,W,2024
+2024-08-24,14:00:00,Saturday,Everton,Tottenham,0,4,0.648869,2.61143,away,L,2024
+2024-08-24,16:30:00,Saturday,Aston Villa,Arsenal,0,2,1.31664,1.41399,home,L,2024
+2024-08-24,16:30:00,Saturday,Arsenal,Aston Villa,2,0,1.41399,1.31664,away,W,2024
+2024-08-25,13:00:00,Sunday,Wolverhampton Wanderers,Chelsea,2,6,2.4181,2.02935,home,L,2024
+2024-08-25,13:00:00,Sunday,Chelsea,Wolverhampton Wanderers,6,2,2.02935,2.4181,away,W,2024
+2024-08-25,13:00:00,Sunday,Bournemouth,Newcastle United,1,1,2.53513,1.89287,home,D,2024
+2024-08-25,13:00:00,Sunday,Newcastle United,Bournemouth,1,1,1.89287,2.53513,away,D,2024
+2024-08-25,15:30:00,Sunday,Liverpool,Brentford,2,0,2.71877,0.457239,home,W,2024
+2024-08-25,15:30:00,Sunday,Brentford,Liverpool,0,2,0.457239,2.71877,away,L,2024
+2024-08-31,11:30:00,Saturday,Arsenal,Brighton,1,1,2.41798,1.81748,home,D,2024
+2024-08-31,11:30:00,Saturday,Brighton,Arsenal,1,1,1.81748,2.41798,away,D,2024
+2024-08-31,14:00:00,Saturday,Brentford,Southampton,3,1,3.86281,1.64713,home,W,2024
+2024-08-31,14:00:00,Saturday,Southampton,Brentford,1,3,1.64713,3.86281,away,L,2024
+2024-08-31,14:00:00,Saturday,Everton,Bournemouth,2,3,2.55629,2.95688,home,L,2024
+2024-08-31,14:00:00,Saturday,Bournemouth,Everton,3,2,2.95688,2.55629,away,W,2024
+2024-08-31,14:00:00,Saturday,Ipswich,Fulham,1,1,0.707048,1.18883,home,D,2024
+2024-08-31,14:00:00,Saturday,Fulham,Ipswich,1,1,1.18883,0.707048,away,D,2024
+2024-08-31,14:00:00,Saturday,Leicester,Aston Villa,1,2,0.774741,2.16385,home,L,2024
+2024-08-31,14:00:00,Saturday,Aston Villa,Leicester,2,1,2.16385,0.774741,away,W,2024
+2024-08-31,14:00:00,Saturday,Nottingham Forest,Wolverhampton Wanderers,1,1,1.41069,0.937632,home,D,2024
+2024-08-31,14:00:00,Saturday,Wolverhampton Wanderers,Nottingham Forest,1,1,0.937632,1.41069,away,D,2024
+2024-08-31,16:30:00,Saturday,West Ham,Manchester City,1,3,0.947201,3.19297,home,L,2024
+2024-08-31,16:30:00,Saturday,Manchester City,West Ham,3,1,3.19297,0.947201,away,W,2024
+2024-09-01,12:30:00,Sunday,Newcastle United,Tottenham,2,1,1.58694,1.63304,home,W,2024
+2024-09-01,12:30:00,Sunday,Tottenham,Newcastle United,1,2,1.63304,1.58694,away,L,2024
+2024-09-01,12:30:00,Sunday,Chelsea,Crystal Palace,1,1,2.97743,0.459708,home,D,2024
+2024-09-01,12:30:00,Sunday,Crystal Palace,Chelsea,1,1,0.459708,2.97743,away,D,2024
+2024-09-01,15:00:00,Sunday,Manchester United,Liverpool,0,3,1.50087,2.10397,home,L,2024
+2024-09-01,15:00:00,Sunday,Liverpool,Manchester United,3,0,2.10397,1.50087,away,W,2024
+2024-09-14,11:30:00,Saturday,Southampton,Manchester United,0,3,1.35593,3.02693,home,L,2024
+2024-09-14,11:30:00,Saturday,Manchester United,Southampton,3,0,3.02693,1.35593,away,W,2024
+2024-09-14,14:00:00,Saturday,Brighton,Ipswich,0,0,1.75696,0.721323,home,D,2024
+2024-09-14,14:00:00,Saturday,Ipswich,Brighton,0,0,0.721323,1.75696,away,D,2024
+2024-09-14,14:00:00,Saturday,Fulham,West Ham,1,1,2.88601,0.682719,home,D,2024
+2024-09-14,14:00:00,Saturday,West Ham,Fulham,1,1,0.682719,2.88601,away,D,2024
+2024-09-14,14:00:00,Saturday,Liverpool,Nottingham Forest,0,1,1.17044,0.589532,home,L,2024
+2024-09-14,14:00:00,Saturday,Nottingham Forest,Liverpool,1,0,0.589532,1.17044,away,W,2024
+2024-09-14,14:00:00,Saturday,Crystal Palace,Leicester,2,2,2.88716,1.65187,home,D,2024
+2024-09-14,14:00:00,Saturday,Leicester,Crystal Palace,2,2,1.65187,2.88716,away,D,2024
+2024-09-14,14:00:00,Saturday,Manchester City,Brentford,2,1,1.55279,1.05094,home,W,2024
+2024-09-14,14:00:00,Saturday,Brentford,Manchester City,1,2,1.05094,1.55279,away,L,2024
+2024-09-14,16:30:00,Saturday,Aston Villa,Everton,3,2,3.15876,0.852158,home,W,2024
+2024-09-14,16:30:00,Saturday,Everton,Aston Villa,2,3,0.852158,3.15876,away,L,2024
+2024-09-14,19:00:00,Saturday,Bournemouth,Chelsea,0,1,1.53731,0.932726,home,L,2024
+2024-09-14,19:00:00,Saturday,Chelsea,Bournemouth,1,0,0.932726,1.53731,away,W,2024
+2024-09-15,13:00:00,Sunday,Tottenham,Arsenal,0,1,0.792595,1.1209,home,L,2024
+2024-09-15,13:00:00,Sunday,Arsenal,Tottenham,1,0,1.1209,0.792595,away,W,2024
+2024-09-15,15:30:00,Sunday,Wolverhampton Wanderers,Newcastle United,1,2,1.46969,1.48343,home,L,2024
+2024-09-15,15:30:00,Sunday,Newcastle United,Wolverhampton Wanderers,2,1,1.48343,1.46969,away,W,2024
+2024-09-21,11:30:00,Saturday,West Ham,Chelsea,0,3,0.758267,2.39727,home,L,2024
+2024-09-21,11:30:00,Saturday,Chelsea,West Ham,3,0,2.39727,0.758267,away,W,2024
+2024-09-21,14:00:00,Saturday,Southampton,Ipswich,1,1,2.89813,1.645,home,D,2024
+2024-09-21,14:00:00,Saturday,Ipswich,Southampton,1,1,1.645,2.89813,away,D,2024
+2024-09-21,14:00:00,Saturday,Leicester,Everton,1,1,1.33793,1.82377,home,D,2024
+2024-09-21,14:00:00,Saturday,Everton,Leicester,1,1,1.82377,1.33793,away,D,2024
+2024-09-21,14:00:00,Saturday,Liverpool,Bournemouth,3,0,2.43731,1.46979,home,W,2024
+2024-09-21,14:00:00,Saturday,Bournemouth,Liverpool,0,3,1.46979,2.43731,away,L,2024
+2024-09-21,14:00:00,Saturday,Fulham,Newcastle United,3,1,3.21141,1.09768,home,W,2024
+2024-09-21,14:00:00,Saturday,Newcastle United,Fulham,1,3,1.09768,3.21141,away,L,2024
+2024-09-21,14:00:00,Saturday,Aston Villa,Wolverhampton Wanderers,3,1,2.37351,0.520117,home,W,2024
+2024-09-21,14:00:00,Saturday,Wolverhampton Wanderers,Aston Villa,1,3,0.520117,2.37351,away,L,2024
+2024-09-21,14:00:00,Saturday,Tottenham,Brentford,3,1,3.89481,0.893565,home,W,2024
+2024-09-21,14:00:00,Saturday,Brentford,Tottenham,1,3,0.893565,3.89481,away,L,2024
+2024-09-21,16:30:00,Saturday,Crystal Palace,Manchester United,0,0,1.66928,2.35056,home,D,2024
+2024-09-21,16:30:00,Saturday,Manchester United,Crystal Palace,0,0,2.35056,1.66928,away,D,2024
+2024-09-22,13:00:00,Sunday,Brighton,Nottingham Forest,2,2,1.56836,1.36923,home,D,2024
+2024-09-22,13:00:00,Sunday,Nottingham Forest,Brighton,2,2,1.36923,1.56836,away,D,2024
+2024-09-22,15:30:00,Sunday,Manchester City,Arsenal,2,2,2.75588,1.28411,home,D,2024
+2024-09-22,15:30:00,Sunday,Arsenal,Manchester City,2,2,1.28411,2.75588,away,D,2024
+2024-09-28,11:30:00,Saturday,Newcastle United,Manchester City,1,1,1.34344,1.26516,home,D,2024
+2024-09-28,11:30:00,Saturday,Manchester City,Newcastle United,1,1,1.26516,1.34344,away,D,2024
+2024-09-28,14:00:00,Saturday,Nottingham Forest,Fulham,0,1,0.614351,1.43592,home,L,2024
+2024-09-28,14:00:00,Saturday,Fulham,Nottingham Forest,1,0,1.43592,0.614351,away,W,2024
+2024-09-28,14:00:00,Saturday,Everton,Crystal Palace,2,1,1.10959,1.12358,home,W,2024
+2024-09-28,14:00:00,Saturday,Crystal Palace,Everton,1,2,1.12358,1.10959,away,L,2024
+2024-09-28,14:00:00,Saturday,Arsenal,Leicester,4,2,6.05305,0.337909,home,W,2024
+2024-09-28,14:00:00,Saturday,Leicester,Arsenal,2,4,0.337909,6.05305,away,L,2024
+2024-09-28,14:00:00,Saturday,Brentford,West Ham,1,1,0.370222,0.878617,home,D,2024
+2024-09-28,14:00:00,Saturday,West Ham,Brentford,1,1,0.878617,0.370222,away,D,2024
+2024-09-28,14:00:00,Saturday,Chelsea,Brighton,4,2,3.65839,1.20712,home,W,2024
+2024-09-28,14:00:00,Saturday,Brighton,Chelsea,2,4,1.20712,3.65839,away,L,2024
+2024-09-28,16:30:00,Saturday,Wolverhampton Wanderers,Liverpool,1,2,0.748925,2.11724,home,L,2024
+2024-09-28,16:30:00,Saturday,Liverpool,Wolverhampton Wanderers,2,1,2.11724,0.748925,away,W,2024
+2024-09-29,13:00:00,Sunday,Ipswich,Aston Villa,2,2,1.84608,1.14494,home,D,2024
+2024-09-29,13:00:00,Sunday,Aston Villa,Ipswich,2,2,1.14494,1.84608,away,D,2024
+2024-09-29,15:30:00,Sunday,Manchester United,Tottenham,0,3,0.600721,5.4072,home,L,2024
+2024-09-29,15:30:00,Sunday,Tottenham,Manchester United,3,0,5.4072,0.600721,away,W,2024
+2024-09-30,19:00:00,Monday,Bournemouth,Southampton,3,1,1.44215,0.696068,home,W,2024
+2024-09-30,19:00:00,Monday,Southampton,Bournemouth,1,3,0.696068,1.44215,away,L,2024
+2024-10-05,11:30:00,Saturday,Crystal Palace,Liverpool,0,1,0.609481,2.07332,home,L,2024
+2024-10-05,11:30:00,Saturday,Liverpool,Crystal Palace,1,0,2.07332,0.609481,away,W,2024
+2024-10-05,14:00:00,Saturday,Leicester,Bournemouth,1,0,0.912063,1.94963,home,W,2024
+2024-10-05,14:00:00,Saturday,Bournemouth,Leicester,0,1,1.94963,0.912063,away,L,2024
+2024-10-05,14:00:00,Saturday,Manchester City,Fulham,3,2,1.36684,2.75846,home,W,2024
+2024-10-05,14:00:00,Saturday,Fulham,Manchester City,2,3,2.75846,1.36684,away,L,2024
+2024-10-05,14:00:00,Saturday,West Ham,Ipswich,4,1,4.39402,1.18463,home,W,2024
+2024-10-05,14:00:00,Saturday,Ipswich,West Ham,1,4,1.18463,4.39402,away,L,2024
+2024-10-05,14:00:00,Saturday,Arsenal,Southampton,3,1,3.25165,1.27313,home,W,2024
+2024-10-05,14:00:00,Saturday,Southampton,Arsenal,1,3,1.27313,3.25165,away,L,2024
+2024-10-05,14:00:00,Saturday,Brentford,Wolverhampton Wanderers,5,3,4.13513,0.696254,home,W,2024
+2024-10-05,14:00:00,Saturday,Wolverhampton Wanderers,Brentford,3,5,0.696254,4.13513,away,L,2024
+2024-10-05,16:30:00,Saturday,Everton,Newcastle United,0,0,0.692214,1.79048,home,D,2024
+2024-10-05,16:30:00,Saturday,Newcastle United,Everton,0,0,1.79048,0.692214,away,D,2024
+2024-10-06,13:00:00,Sunday,Chelsea,Nottingham Forest,1,1,2.27752,1.66654,home,D,2024
+2024-10-06,13:00:00,Sunday,Nottingham Forest,Chelsea,1,1,1.66654,2.27752,away,D,2024
+2024-10-06,13:00:00,Sunday,Aston Villa,Manchester United,0,0,0.532809,0.448537,home,D,2024
+2024-10-06,13:00:00,Sunday,Manchester United,Aston Villa,0,0,0.448537,0.532809,away,D,2024
+2024-10-06,15:30:00,Sunday,Brighton,Tottenham,3,2,1.97217,1.09279,home,W,2024
+2024-10-06,15:30:00,Sunday,Tottenham,Brighton,2,3,1.09279,1.97217,away,L,2024
+2024-10-19,11:30:00,Saturday,Tottenham,West Ham,4,1,1.44052,0.858803,home,W,2024
+2024-10-19,11:30:00,Saturday,West Ham,Tottenham,1,4,0.858803,1.44052,away,L,2024
+2024-10-19,14:00:00,Saturday,Fulham,Aston Villa,1,3,2.63074,1.43595,home,L,2024
+2024-10-19,14:00:00,Saturday,Aston Villa,Fulham,3,1,1.43595,2.63074,away,W,2024
+2024-10-19,14:00:00,Saturday,Ipswich,Everton,0,2,1.174,1.60804,home,L,2024
+2024-10-19,14:00:00,Saturday,Everton,Ipswich,2,0,1.60804,1.174,away,W,2024
+2024-10-19,14:00:00,Saturday,Manchester United,Brentford,2,1,1.76555,0.892843,home,W,2024
+2024-10-19,14:00:00,Saturday,Brentford,Manchester United,1,2,0.892843,1.76555,away,L,2024
+2024-10-19,14:00:00,Saturday,Newcastle United,Brighton,0,1,1.93657,1.6779,home,L,2024
+2024-10-19,14:00:00,Saturday,Brighton,Newcastle United,1,0,1.6779,1.93657,away,W,2024
+2024-10-19,14:00:00,Saturday,Southampton,Leicester,2,3,2.42776,2.83826,home,L,2024
+2024-10-19,14:00:00,Saturday,Leicester,Southampton,3,2,2.83826,2.42776,away,W,2024
+2024-10-19,16:30:00,Saturday,Bournemouth,Arsenal,2,0,2.18419,0.740758,home,W,2024
+2024-10-19,16:30:00,Saturday,Arsenal,Bournemouth,0,2,0.740758,2.18419,away,L,2024
+2024-10-20,13:00:00,Sunday,Wolverhampton Wanderers,Manchester City,1,2,0.761217,1.36569,home,L,2024
+2024-10-20,13:00:00,Sunday,Manchester City,Wolverhampton Wanderers,2,1,1.36569,0.761217,away,W,2024
+2024-10-20,15:30:00,Sunday,Liverpool,Chelsea,2,1,2.22517,1.33904,home,W,2024
+2024-10-20,15:30:00,Sunday,Chelsea,Liverpool,1,2,1.33904,2.22517,away,L,2024
+2024-10-21,19:00:00,Monday,Nottingham Forest,Crystal Palace,1,0,1.88573,0.835001,home,W,2024
+2024-10-21,19:00:00,Monday,Crystal Palace,Nottingham Forest,0,1,0.835001,1.88573,away,L,2024
+2024-10-25,19:00:00,Friday,Leicester,Nottingham Forest,1,3,0.832415,2.54488,home,L,2024
+2024-10-25,19:00:00,Friday,Nottingham Forest,Leicester,3,1,2.54488,0.832415,away,W,2024
+2024-10-26,14:00:00,Saturday,Manchester City,Southampton,1,0,3.16286,0.369989,home,W,2024
+2024-10-26,14:00:00,Saturday,Southampton,Manchester City,0,1,0.369989,3.16286,away,L,2024
+2024-10-26,14:00:00,Saturday,Aston Villa,Bournemouth,1,1,1.974,0.328651,home,D,2024
+2024-10-26,14:00:00,Saturday,Bournemouth,Aston Villa,1,1,0.328651,1.974,away,D,2024
+2024-10-26,14:00:00,Saturday,Brentford,Ipswich,4,3,4.09663,1.65698,home,W,2024
+2024-10-26,14:00:00,Saturday,Ipswich,Brentford,3,4,1.65698,4.09663,away,L,2024
+2024-10-26,14:00:00,Saturday,Brighton,Wolverhampton Wanderers,2,2,1.51347,1.11074,home,D,2024
+2024-10-26,14:00:00,Saturday,Wolverhampton Wanderers,Brighton,2,2,1.11074,1.51347,away,D,2024
+2024-10-26,16:30:00,Saturday,Everton,Fulham,1,1,0.884845,1.49531,home,D,2024
+2024-10-26,16:30:00,Saturday,Fulham,Everton,1,1,1.49531,0.884845,away,D,2024
+2024-10-27,14:00:00,Sunday,Chelsea,Newcastle United,2,1,1.61794,1.74225,home,W,2024
+2024-10-27,14:00:00,Sunday,Newcastle United,Chelsea,1,2,1.74225,1.61794,away,L,2024
+2024-10-27,14:00:00,Sunday,Crystal Palace,Tottenham,1,0,0.978611,1.0192,home,W,2024
+2024-10-27,14:00:00,Sunday,Tottenham,Crystal Palace,0,1,1.0192,0.978611,away,L,2024
+2024-10-27,14:00:00,Sunday,West Ham,Manchester United,2,1,2.99312,2.62598,home,W,2024
+2024-10-27,14:00:00,Sunday,Manchester United,West Ham,1,2,2.62598,2.99312,away,L,2024
+2024-10-27,16:30:00,Sunday,Arsenal,Liverpool,2,2,1.0883,1.35346,home,D,2024
+2024-10-27,16:30:00,Sunday,Liverpool,Arsenal,2,2,1.35346,1.0883,away,D,2024
+2024-11-02,12:30:00,Saturday,Newcastle United,Arsenal,1,0,0.859715,0.911305,home,W,2024
+2024-11-02,12:30:00,Saturday,Arsenal,Newcastle United,0,1,0.911305,0.859715,away,L,2024
+2024-11-02,15:00:00,Saturday,Bournemouth,Manchester City,2,1,2.4493,2.3527,home,W,2024
+2024-11-02,15:00:00,Saturday,Manchester City,Bournemouth,1,2,2.3527,2.4493,away,L,2024
+2024-11-02,15:00:00,Saturday,Ipswich,Leicester,1,1,1.33617,2.33858,home,D,2024
+2024-11-02,15:00:00,Saturday,Leicester,Ipswich,1,1,2.33858,1.33617,away,D,2024
+2024-11-02,15:00:00,Saturday,Liverpool,Brighton,2,1,1.81037,1.01568,home,W,2024
+2024-11-02,15:00:00,Saturday,Brighton,Liverpool,1,2,1.01568,1.81037,away,L,2024
+2024-11-02,15:00:00,Saturday,Nottingham Forest,West Ham,3,0,2.35011,0.132317,home,W,2024
+2024-11-02,15:00:00,Saturday,West Ham,Nottingham Forest,0,3,0.132317,2.35011,away,L,2024
+2024-11-02,15:00:00,Saturday,Southampton,Everton,1,0,0.540345,1.78581,home,W,2024
+2024-11-02,15:00:00,Saturday,Everton,Southampton,0,1,1.78581,0.540345,away,L,2024
+2024-11-02,17:30:00,Saturday,Wolverhampton Wanderers,Crystal Palace,2,2,1.65018,2.64849,home,D,2024
+2024-11-02,17:30:00,Saturday,Crystal Palace,Wolverhampton Wanderers,2,2,2.64849,1.65018,away,D,2024
+2024-11-03,14:00:00,Sunday,Tottenham,Aston Villa,4,1,2.09751,2.48749,home,W,2024
+2024-11-03,14:00:00,Sunday,Aston Villa,Tottenham,1,4,2.48749,2.09751,away,L,2024
+2024-11-03,16:30:00,Sunday,Manchester United,Chelsea,1,1,2.1605,1.21071,home,D,2024
+2024-11-03,16:30:00,Sunday,Chelsea,Manchester United,1,1,1.21071,2.1605,away,D,2024
+2024-11-04,20:00:00,Monday,Fulham,Brentford,2,1,1.43017,0.739231,home,W,2024
+2024-11-04,20:00:00,Monday,Brentford,Fulham,1,2,0.739231,1.43017,away,L,2024
+2024-11-09,15:00:00,Saturday,Brentford,Bournemouth,3,2,1.56474,2.49234,home,W,2024
+2024-11-09,15:00:00,Saturday,Bournemouth,Brentford,2,3,2.49234,1.56474,away,L,2024
+2024-11-09,15:00:00,Saturday,Crystal Palace,Fulham,0,2,1.96037,2.25331,home,L,2024
+2024-11-09,15:00:00,Saturday,Fulham,Crystal Palace,2,0,2.25331,1.96037,away,W,2024
+2024-11-09,15:00:00,Saturday,West Ham,Everton,0,0,1.1237,0.865983,home,D,2024
+2024-11-09,15:00:00,Saturday,Everton,West Ham,0,0,0.865983,1.1237,away,D,2024
+2024-11-09,15:00:00,Saturday,Wolverhampton Wanderers,Southampton,2,0,0.912781,0.792655,home,W,2024
+2024-11-09,15:00:00,Saturday,Southampton,Wolverhampton Wanderers,0,2,0.792655,0.912781,away,L,2024
+2024-11-09,17:30:00,Saturday,Brighton,Manchester City,2,1,2.87116,2.60334,home,W,2024
+2024-11-09,17:30:00,Saturday,Manchester City,Brighton,1,2,2.60334,2.87116,away,L,2024
+2024-11-09,20:00:00,Saturday,Liverpool,Aston Villa,2,0,2.68196,1.66337,home,W,2024
+2024-11-09,20:00:00,Saturday,Aston Villa,Liverpool,0,2,1.66337,2.68196,away,L,2024
+2024-11-10,14:00:00,Sunday,Nottingham Forest,Newcastle United,1,3,1.17852,1.86904,home,L,2024
+2024-11-10,14:00:00,Sunday,Newcastle United,Nottingham Forest,3,1,1.86904,1.17852,away,W,2024
+2024-11-10,14:00:00,Sunday,Manchester United,Leicester,3,0,1.2369,0.417295,home,W,2024
+2024-11-10,14:00:00,Sunday,Leicester,Manchester United,0,3,0.417295,1.2369,away,L,2024
+2024-11-10,14:00:00,Sunday,Tottenham,Ipswich,1,2,1.75088,2.18392,home,L,2024
+2024-11-10,14:00:00,Sunday,Ipswich,Tottenham,2,1,2.18392,1.75088,away,W,2024
+2024-11-10,16:30:00,Sunday,Chelsea,Arsenal,1,1,1.24067,1.9605,home,D,2024
+2024-11-10,16:30:00,Sunday,Arsenal,Chelsea,1,1,1.9605,1.24067,away,D,2024
+2024-11-23,12:30:00,Saturday,Leicester,Chelsea,1,2,0.967987,2.81658,home,L,2024
+2024-11-23,12:30:00,Saturday,Chelsea,Leicester,2,1,2.81658,0.967987,away,W,2024
+2024-11-23,15:00:00,Saturday,Bournemouth,Brighton,1,2,1.91157,1.23059,home,L,2024
+2024-11-23,15:00:00,Saturday,Brighton,Bournemouth,2,1,1.23059,1.91157,away,W,2024
+2024-11-23,15:00:00,Saturday,Arsenal,Nottingham Forest,3,0,1.66016,0.403136,home,W,2024
+2024-11-23,15:00:00,Saturday,Nottingham Forest,Arsenal,0,3,0.403136,1.66016,away,L,2024
+2024-11-23,15:00:00,Saturday,Everton,Brentford,0,0,1.5951,1.34314,home,D,2024
+2024-11-23,15:00:00,Saturday,Brentford,Everton,0,0,1.34314,1.5951,away,D,2024
+2024-11-23,15:00:00,Saturday,Aston Villa,Crystal Palace,2,2,3.04455,1.61437,home,D,2024
+2024-11-23,15:00:00,Saturday,Crystal Palace,Aston Villa,2,2,1.61437,3.04455,away,D,2024
+2024-11-23,15:00:00,Saturday,Fulham,Wolverhampton Wanderers,1,4,0.717158,1.33903,home,L,2024
+2024-11-23,15:00:00,Saturday,Wolverhampton Wanderers,Fulham,4,1,1.33903,0.717158,away,W,2024
+2024-11-23,17:30:00,Saturday,Manchester City,Tottenham,0,4,2.15899,3.30449,home,L,2024
+2024-11-23,17:30:00,Saturday,Tottenham,Manchester City,4,0,3.30449,2.15899,away,W,2024
+2024-11-24,14:00:00,Sunday,Southampton,Liverpool,2,3,1.53985,3.18835,home,L,2024
+2024-11-24,14:00:00,Sunday,Liverpool,Southampton,3,2,3.18835,1.53985,away,W,2024
+2024-11-24,16:30:00,Sunday,Ipswich,Manchester United,1,1,1.98714,1.26912,home,D,2024
+2024-11-24,16:30:00,Sunday,Manchester United,Ipswich,1,1,1.26912,1.98714,away,D,2024
+2024-11-25,20:00:00,Monday,Newcastle United,West Ham,0,2,1.49781,0.942824,home,L,2024
+2024-11-25,20:00:00,Monday,West Ham,Newcastle United,2,0,0.942824,1.49781,away,W,2024
+2024-11-29,20:00:00,Friday,Brighton,Southampton,1,1,1.86986,0.934969,home,D,2024
+2024-11-29,20:00:00,Friday,Southampton,Brighton,1,1,0.934969,1.86986,away,D,2024
+2024-11-30,15:00:00,Saturday,Brentford,Leicester,4,1,2.21885,0.907555,home,W,2024
+2024-11-30,15:00:00,Saturday,Leicester,Brentford,1,4,0.907555,2.21885,away,L,2024
+2024-11-30,15:00:00,Saturday,Crystal Palace,Newcastle United,1,1,2.29595,0.020989,home,D,2024
+2024-11-30,15:00:00,Saturday,Newcastle United,Crystal Palace,1,1,0.020989,2.29595,away,D,2024
+2024-11-30,15:00:00,Saturday,Nottingham Forest,Ipswich,1,0,1.76587,0.462771,home,W,2024
+2024-11-30,15:00:00,Saturday,Ipswich,Nottingham Forest,0,1,0.462771,1.76587,away,L,2024
+2024-11-30,15:00:00,Saturday,Wolverhampton Wanderers,Bournemouth,2,4,0.866034,3.07901,home,L,2024
+2024-11-30,15:00:00,Saturday,Bournemouth,Wolverhampton Wanderers,4,2,3.07901,0.866034,away,W,2024
+2024-11-30,17:30:00,Saturday,West Ham,Arsenal,2,5,1.23539,3.99935,home,L,2024
+2024-11-30,17:30:00,Saturday,Arsenal,West Ham,5,2,3.99935,1.23539,away,W,2024
+2024-12-01,13:30:00,Sunday,Chelsea,Aston Villa,3,0,1.94939,0.875443,home,W,2024
+2024-12-01,13:30:00,Sunday,Aston Villa,Chelsea,0,3,0.875443,1.94939,away,L,2024
+2024-12-01,13:30:00,Sunday,Manchester United,Everton,4,0,1.76161,0.766749,home,W,2024
+2024-12-01,13:30:00,Sunday,Everton,Manchester United,0,4,0.766749,1.76161,away,L,2024
+2024-12-01,13:30:00,Sunday,Tottenham,Fulham,1,1,1.01086,1.57274,home,D,2024
+2024-12-01,13:30:00,Sunday,Fulham,Tottenham,1,1,1.57274,1.01086,away,D,2024
+2024-12-01,16:00:00,Sunday,Liverpool,Manchester City,2,0,3.70054,0.745015,home,W,2024
+2024-12-01,16:00:00,Sunday,Manchester City,Liverpool,0,2,0.745015,3.70054,away,L,2024
+2024-12-03,19:30:00,Tuesday,Ipswich,Crystal Palace,0,1,0.471708,1.65422,home,L,2024
+2024-12-03,19:30:00,Tuesday,Crystal Palace,Ipswich,1,0,1.65422,0.471708,away,W,2024
+2024-12-03,20:15:00,Tuesday,Leicester,West Ham,3,1,2.78061,2.87716,home,W,2024
+2024-12-03,20:15:00,Tuesday,West Ham,Leicester,1,3,2.87716,2.78061,away,L,2024
+2024-12-04,19:30:00,Wednesday,Everton,Wolverhampton Wanderers,4,0,1.49904,0.847724,home,W,2024
+2024-12-04,19:30:00,Wednesday,Wolverhampton Wanderers,Everton,0,4,0.847724,1.49904,away,L,2024
+2024-12-04,19:30:00,Wednesday,Manchester City,Nottingham Forest,3,0,3.20169,0.802155,home,W,2024
+2024-12-04,19:30:00,Wednesday,Nottingham Forest,Manchester City,0,3,0.802155,3.20169,away,L,2024
+2024-12-04,19:30:00,Wednesday,Newcastle United,Liverpool,3,3,1.52057,2.22766,home,D,2024
+2024-12-04,19:30:00,Wednesday,Liverpool,Newcastle United,3,3,2.22766,1.52057,away,D,2024
+2024-12-04,19:30:00,Wednesday,Southampton,Chelsea,1,5,1.91014,5.8331,home,L,2024
+2024-12-04,19:30:00,Wednesday,Chelsea,Southampton,5,1,5.8331,1.91014,away,W,2024
+2024-12-04,20:15:00,Wednesday,Arsenal,Manchester United,2,0,2.96684,0.256083,home,W,2024
+2024-12-04,20:15:00,Wednesday,Manchester United,Arsenal,0,2,0.256083,2.96684,away,L,2024
+2024-12-04,20:15:00,Wednesday,Aston Villa,Brentford,3,1,3.21673,1.13266,home,W,2024
+2024-12-04,20:15:00,Wednesday,Brentford,Aston Villa,1,3,1.13266,3.21673,away,L,2024
+2024-12-05,19:30:00,Thursday,Fulham,Brighton,3,1,0.666644,1.09939,home,W,2024
+2024-12-05,19:30:00,Thursday,Brighton,Fulham,1,3,1.09939,0.666644,away,L,2024
+2024-12-05,20:15:00,Thursday,Bournemouth,Tottenham,1,0,3.27716,0.623934,home,W,2024
+2024-12-05,20:15:00,Thursday,Tottenham,Bournemouth,0,1,0.623934,3.27716,away,L,2024
+2024-12-07,15:00:00,Saturday,Aston Villa,Southampton,1,0,2.51338,0.385832,home,W,2024
+2024-12-07,15:00:00,Saturday,Southampton,Aston Villa,0,1,0.385832,2.51338,away,L,2024
+2024-12-07,15:00:00,Saturday,Brentford,Newcastle United,4,2,1.746,1.95645,home,W,2024
+2024-12-07,15:00:00,Saturday,Newcastle United,Brentford,2,4,1.95645,1.746,away,L,2024
+2024-12-07,15:00:00,Saturday,Crystal Palace,Manchester City,2,2,1.21476,1.5846,home,D,2024
+2024-12-07,15:00:00,Saturday,Manchester City,Crystal Palace,2,2,1.5846,1.21476,away,D,2024
+2024-12-07,17:30:00,Saturday,Manchester United,Nottingham Forest,2,3,1.4697,0.651217,home,L,2024
+2024-12-07,17:30:00,Saturday,Nottingham Forest,Manchester United,3,2,0.651217,1.4697,away,W,2024
+2024-12-08,14:00:00,Sunday,Fulham,Arsenal,1,1,0.150988,2.4333,home,D,2024
+2024-12-08,14:00:00,Sunday,Arsenal,Fulham,1,1,2.4333,0.150988,away,D,2024
+2024-12-08,14:00:00,Sunday,Ipswich,Bournemouth,1,2,1.5668,3.49127,home,L,2024
+2024-12-08,14:00:00,Sunday,Bournemouth,Ipswich,2,1,3.49127,1.5668,away,W,2024
+2024-12-08,14:00:00,Sunday,Leicester,Brighton,2,2,1.42438,1.12184,home,D,2024
+2024-12-08,14:00:00,Sunday,Brighton,Leicester,2,2,1.12184,1.42438,away,D,2024
+2024-12-08,16:30:00,Sunday,Tottenham,Chelsea,3,4,3.25488,2.57326,home,L,2024
+2024-12-08,16:30:00,Sunday,Chelsea,Tottenham,4,3,2.57326,3.25488,away,W,2024
+2024-12-09,20:00:00,Monday,West Ham,Wolverhampton Wanderers,2,1,1.19808,1.47567,home,W,2024
+2024-12-09,20:00:00,Monday,Wolverhampton Wanderers,West Ham,1,2,1.47567,1.19808,away,L,2024
+2024-12-14,15:00:00,Saturday,Liverpool,Fulham,2,2,2.09698,1.2862,home,D,2024
+2024-12-14,15:00:00,Saturday,Fulham,Liverpool,2,2,1.2862,2.09698,away,D,2024
+2024-12-14,15:00:00,Saturday,Arsenal,Everton,0,0,1.30865,0.132166,home,D,2024
+2024-12-14,15:00:00,Saturday,Everton,Arsenal,0,0,0.132166,1.30865,away,D,2024
+2024-12-14,15:00:00,Saturday,Wolverhampton Wanderers,Ipswich,1,2,1.23748,1.73349,home,L,2024
+2024-12-14,15:00:00,Saturday,Ipswich,Wolverhampton Wanderers,2,1,1.73349,1.23748,away,W,2024
+2024-12-14,15:00:00,Saturday,Newcastle United,Leicester,4,0,3.95461,0.186759,home,W,2024
+2024-12-14,15:00:00,Saturday,Leicester,Newcastle United,0,4,0.186759,3.95461,away,L,2024
+2024-12-14,17:30:00,Saturday,Nottingham Forest,Aston Villa,2,1,2.2861,0.389423,home,W,2024
+2024-12-14,17:30:00,Saturday,Aston Villa,Nottingham Forest,1,2,0.389423,2.2861,away,L,2024
+2024-12-15,14:00:00,Sunday,Brighton,Crystal Palace,1,3,1.32323,3.00618,home,L,2024
+2024-12-15,14:00:00,Sunday,Crystal Palace,Brighton,3,1,3.00618,1.32323,away,W,2024
+2024-12-15,16:30:00,Sunday,Manchester City,Manchester United,1,2,0.638103,2.04662,home,L,2024
+2024-12-15,16:30:00,Sunday,Manchester United,Manchester City,2,1,2.04662,0.638103,away,W,2024
+2024-12-15,19:00:00,Sunday,Chelsea,Brentford,2,1,2.59146,1.65861,home,W,2024
+2024-12-15,19:00:00,Sunday,Brentford,Chelsea,1,2,1.65861,2.59146,away,L,2024
+2024-12-15,19:00:00,Sunday,Southampton,Tottenham,0,5,1.27356,3.89322,home,L,2024
+2024-12-15,19:00:00,Sunday,Tottenham,Southampton,5,0,3.89322,1.27356,away,W,2024
+2024-12-16,20:00:00,Monday,Bournemouth,West Ham,1,1,2.04842,1.81827,home,D,2024
+2024-12-16,20:00:00,Monday,West Ham,Bournemouth,1,1,1.81827,2.04842,away,D,2024
+2024-12-21,12:30:00,Saturday,Aston Villa,Manchester City,2,1,2.05988,1.09627,home,W,2024
+2024-12-21,12:30:00,Saturday,Manchester City,Aston Villa,1,2,1.09627,2.05988,away,L,2024
+2024-12-21,15:00:00,Saturday,Brentford,Nottingham Forest,0,2,0.769004,0.964897,home,L,2024
+2024-12-21,15:00:00,Saturday,Nottingham Forest,Brentford,2,0,0.964897,0.769004,away,W,2024
+2024-12-21,15:00:00,Saturday,West Ham,Brighton,1,1,1.22937,1.34379,home,D,2024
+2024-12-21,15:00:00,Saturday,Brighton,West Ham,1,1,1.34379,1.22937,away,D,2024
+2024-12-21,15:00:00,Saturday,Ipswich,Newcastle United,0,4,1.06427,3.23386,home,L,2024
+2024-12-21,15:00:00,Saturday,Newcastle United,Ipswich,4,0,3.23386,1.06427,away,W,2024
+2024-12-21,17:30:00,Saturday,Crystal Palace,Arsenal,1,5,1.6052,3.05434,home,L,2024
+2024-12-21,17:30:00,Saturday,Arsenal,Crystal Palace,5,1,3.05434,1.6052,away,W,2024
+2024-12-22,14:00:00,Sunday,Fulham,Southampton,0,0,1.25255,0.280031,home,D,2024
+2024-12-22,14:00:00,Sunday,Southampton,Fulham,0,0,0.280031,1.25255,away,D,2024
+2024-12-22,14:00:00,Sunday,Everton,Chelsea,0,0,1.07081,1.51591,home,D,2024
+2024-12-22,14:00:00,Sunday,Chelsea,Everton,0,0,1.51591,1.07081,away,D,2024
+2024-12-22,14:00:00,Sunday,Manchester United,Bournemouth,0,3,2.28533,1.82831,home,L,2024
+2024-12-22,14:00:00,Sunday,Bournemouth,Manchester United,3,0,1.82831,2.28533,away,W,2024
+2024-12-22,14:00:00,Sunday,Leicester,Wolverhampton Wanderers,0,3,0.78868,1.13531,home,L,2024
+2024-12-22,14:00:00,Sunday,Wolverhampton Wanderers,Leicester,3,0,1.13531,0.78868,away,W,2024
+2024-12-22,16:30:00,Sunday,Tottenham,Liverpool,3,6,1.20245,5.20214,home,L,2024
+2024-12-22,16:30:00,Sunday,Liverpool,Tottenham,6,3,5.20214,1.20245,away,W,2024
+2024-12-26,12:30:00,Thursday,Manchester City,Everton,1,1,2.51965,0.653289,home,D,2024
+2024-12-26,12:30:00,Thursday,Everton,Manchester City,1,1,0.653289,2.51965,away,D,2024
+2024-12-26,15:00:00,Thursday,Bournemouth,Crystal Palace,0,0,1.20189,0.500066,home,D,2024
+2024-12-26,15:00:00,Thursday,Crystal Palace,Bournemouth,0,0,0.500066,1.20189,away,D,2024
+2024-12-26,15:00:00,Thursday,Chelsea,Fulham,1,2,1.55626,1.77929,home,L,2024
+2024-12-26,15:00:00,Thursday,Fulham,Chelsea,2,1,1.77929,1.55626,away,W,2024
+2024-12-26,15:00:00,Thursday,Newcastle United,Aston Villa,3,0,2.82867,0.225522,home,W,2024
+2024-12-26,15:00:00,Thursday,Aston Villa,Newcastle United,0,3,0.225522,2.82867,away,L,2024
+2024-12-26,15:00:00,Thursday,Nottingham Forest,Tottenham,1,0,1.30018,1.05758,home,W,2024
+2024-12-26,15:00:00,Thursday,Tottenham,Nottingham Forest,0,1,1.05758,1.30018,away,L,2024
+2024-12-26,15:00:00,Thursday,Southampton,West Ham,0,1,2.19833,1.90111,home,L,2024
+2024-12-26,15:00:00,Thursday,West Ham,Southampton,1,0,1.90111,2.19833,away,W,2024
+2024-12-26,17:30:00,Thursday,Wolverhampton Wanderers,Manchester United,2,0,0.826489,0.358876,home,W,2024
+2024-12-26,17:30:00,Thursday,Manchester United,Wolverhampton Wanderers,0,2,0.358876,0.826489,away,L,2024
+2024-12-26,20:00:00,Thursday,Liverpool,Leicester,3,1,1.89935,0.22097,home,W,2024
+2024-12-26,20:00:00,Thursday,Leicester,Liverpool,1,3,0.22097,1.89935,away,L,2024
+2024-12-27,19:30:00,Friday,Brighton,Brentford,0,0,1.33538,0.961233,home,D,2024
+2024-12-27,19:30:00,Friday,Brentford,Brighton,0,0,0.961233,1.33538,away,D,2024
+2024-12-27,20:15:00,Friday,Arsenal,Ipswich,1,0,2.16462,0.0783327,home,W,2024
+2024-12-27,20:15:00,Friday,Ipswich,Arsenal,0,1,0.0783327,2.16462,away,L,2024
+2024-12-29,14:30:00,Sunday,Leicester,Manchester City,0,2,1.84208,1.58002,home,L,2024
+2024-12-29,14:30:00,Sunday,Manchester City,Leicester,2,0,1.58002,1.84208,away,W,2024
+2024-12-29,15:00:00,Sunday,Crystal Palace,Southampton,2,1,3.05417,1.21853,home,W,2024
+2024-12-29,15:00:00,Sunday,Southampton,Crystal Palace,1,2,1.21853,3.05417,away,L,2024
+2024-12-29,15:00:00,Sunday,Everton,Nottingham Forest,0,2,0.615191,2.02753,home,L,2024
+2024-12-29,15:00:00,Sunday,Nottingham Forest,Everton,2,0,2.02753,0.615191,away,W,2024
+2024-12-29,15:00:00,Sunday,Fulham,Bournemouth,2,2,0.961566,1.70692,home,D,2024
+2024-12-29,15:00:00,Sunday,Bournemouth,Fulham,2,2,1.70692,0.961566,away,D,2024
+2024-12-29,15:00:00,Sunday,Tottenham,Wolverhampton Wanderers,2,2,2.28433,0.640697,home,D,2024
+2024-12-29,15:00:00,Sunday,Wolverhampton Wanderers,Tottenham,2,2,0.640697,2.28433,away,D,2024
+2024-12-29,17:15:00,Sunday,West Ham,Liverpool,0,5,0.518279,3.29868,home,L,2024
+2024-12-29,17:15:00,Sunday,Liverpool,West Ham,5,0,3.29868,0.518279,away,W,2024
+2024-12-30,19:45:00,Monday,Aston Villa,Brighton,2,2,1.87997,0.938042,home,D,2024
+2024-12-30,19:45:00,Monday,Brighton,Aston Villa,2,2,0.938042,1.87997,away,D,2024
+2024-12-30,19:45:00,Monday,Ipswich,Chelsea,2,0,1.50093,1.60622,home,W,2024
+2024-12-30,19:45:00,Monday,Chelsea,Ipswich,0,2,1.60622,1.50093,away,L,2024
+2024-12-30,20:00:00,Monday,Manchester United,Newcastle United,0,2,1.00073,2.2424,home,L,2024
+2024-12-30,20:00:00,Monday,Newcastle United,Manchester United,2,0,2.2424,1.00073,away,W,2024
+2025-01-01,17:30:00,Wednesday,Brentford,Arsenal,1,3,0.272604,1.99848,home,L,2024
+2025-01-01,17:30:00,Wednesday,Arsenal,Brentford,3,1,1.99848,0.272604,away,W,2024
+2025-01-04,12:30:00,Saturday,Tottenham,Newcastle United,1,2,1.00333,2.42963,home,L,2024
+2025-01-04,12:30:00,Saturday,Newcastle United,Tottenham,2,1,2.42963,1.00333,away,W,2024
+2025-01-04,15:00:00,Saturday,Bournemouth,Everton,1,0,2.61852,0.561015,home,W,2024
+2025-01-04,15:00:00,Saturday,Everton,Bournemouth,0,1,0.561015,2.61852,away,L,2024
+2025-01-04,15:00:00,Saturday,Aston Villa,Leicester,2,1,2.3456,0.81548,home,W,2024
+2025-01-04,15:00:00,Saturday,Leicester,Aston Villa,1,2,0.81548,2.3456,away,L,2024
+2025-01-04,15:00:00,Saturday,Crystal Palace,Chelsea,1,1,1.2766,1.51541,home,D,2024
+2025-01-04,15:00:00,Saturday,Chelsea,Crystal Palace,1,1,1.51541,1.2766,away,D,2024
+2025-01-04,15:00:00,Saturday,Manchester City,West Ham,4,1,1.97986,1.53286,home,W,2024
+2025-01-04,15:00:00,Saturday,West Ham,Manchester City,1,4,1.53286,1.97986,away,L,2024
+2025-01-04,15:00:00,Saturday,Southampton,Brentford,0,5,0.249614,5.54874,home,L,2024
+2025-01-04,15:00:00,Saturday,Brentford,Southampton,5,0,5.54874,0.249614,away,W,2024
+2025-01-04,17:30:00,Saturday,Brighton,Arsenal,1,1,1.76513,1.81142,home,D,2024
+2025-01-04,17:30:00,Saturday,Arsenal,Brighton,1,1,1.81142,1.76513,away,D,2024
+2025-01-05,14:00:00,Sunday,Fulham,Ipswich,2,2,2.65469,1.4434,home,D,2024
+2025-01-05,14:00:00,Sunday,Ipswich,Fulham,2,2,1.4434,2.65469,away,D,2024
+2025-01-05,16:30:00,Sunday,Liverpool,Manchester United,2,2,2.862,1.67469,home,D,2024
+2025-01-05,16:30:00,Sunday,Manchester United,Liverpool,2,2,1.67469,2.862,away,D,2024
+2025-01-06,20:00:00,Monday,Wolverhampton Wanderers,Nottingham Forest,0,3,1.90463,2.57227,home,L,2024
+2025-01-06,20:00:00,Monday,Nottingham Forest,Wolverhampton Wanderers,3,0,2.57227,1.90463,away,W,2024
+2025-01-14,19:30:00,Tuesday,Brentford,Manchester City,2,2,2.39088,2.65315,home,D,2024
+2025-01-14,19:30:00,Tuesday,Manchester City,Brentford,2,2,2.65315,2.39088,away,D,2024
+2025-01-14,19:30:00,Tuesday,West Ham,Fulham,3,2,0.937322,2.83581,home,W,2024
+2025-01-14,19:30:00,Tuesday,Fulham,West Ham,2,3,2.83581,0.937322,away,L,2024
+2025-01-14,19:30:00,Tuesday,Chelsea,Bournemouth,2,2,2.53808,1.14845,home,D,2024
+2025-01-14,19:30:00,Tuesday,Bournemouth,Chelsea,2,2,1.14845,2.53808,away,D,2024
+2025-01-14,20:00:00,Tuesday,Nottingham Forest,Liverpool,1,1,0.5292,2.72291,home,D,2024
+2025-01-14,20:00:00,Tuesday,Liverpool,Nottingham Forest,1,1,2.72291,0.5292,away,D,2024
+2025-01-15,19:30:00,Wednesday,Everton,Aston Villa,0,1,1.23126,1.28522,home,L,2024
+2025-01-15,19:30:00,Wednesday,Aston Villa,Everton,1,0,1.28522,1.23126,away,W,2024
+2025-01-15,19:30:00,Wednesday,Leicester,Crystal Palace,0,2,2.09904,2.2647,home,L,2024
+2025-01-15,19:30:00,Wednesday,Crystal Palace,Leicester,2,0,2.2647,2.09904,away,W,2024
+2025-01-15,19:30:00,Wednesday,Newcastle United,Wolverhampton Wanderers,3,0,2.13327,1.47433,home,W,2024
+2025-01-15,19:30:00,Wednesday,Wolverhampton Wanderers,Newcastle United,0,3,1.47433,2.13327,away,L,2024
+2025-01-15,20:00:00,Wednesday,Arsenal,Tottenham,2,1,2.25501,0.777071,home,W,2024
+2025-01-15,20:00:00,Wednesday,Tottenham,Arsenal,1,2,0.777071,2.25501,away,L,2024
+2025-01-16,19:30:00,Thursday,Ipswich,Brighton,0,2,0.268127,1.06343,home,L,2024
+2025-01-16,19:30:00,Thursday,Brighton,Ipswich,2,0,1.06343,0.268127,away,W,2024
+2025-01-16,20:00:00,Thursday,Manchester United,Southampton,3,1,3.10847,1.36705,home,W,2024
+2025-01-16,20:00:00,Thursday,Southampton,Manchester United,1,3,1.36705,3.10847,away,L,2024
+2025-01-18,12:30:00,Saturday,Newcastle United,Bournemouth,1,4,0.837801,2.70174,home,L,2024
+2025-01-18,12:30:00,Saturday,Bournemouth,Newcastle United,4,1,2.70174,0.837801,away,W,2024
+2025-01-18,15:00:00,Saturday,Brentford,Liverpool,0,2,1.20021,4.16249,home,L,2024
+2025-01-18,15:00:00,Saturday,Liverpool,Brentford,2,0,4.16249,1.20021,away,W,2024
+2025-01-18,15:00:00,Saturday,Leicester,Fulham,0,2,0.676934,2.36823,home,L,2024
+2025-01-18,15:00:00,Saturday,Fulham,Leicester,2,0,2.36823,0.676934,away,W,2024
+2025-01-18,15:00:00,Saturday,West Ham,Crystal Palace,0,2,0.221062,1.62561,home,L,2024
+2025-01-18,15:00:00,Saturday,Crystal Palace,West Ham,2,0,1.62561,0.221062,away,W,2024
+2025-01-18,17:30:00,Saturday,Arsenal,Aston Villa,2,2,1.64458,1.20602,home,D,2024
+2025-01-18,17:30:00,Saturday,Aston Villa,Arsenal,2,2,1.20602,1.64458,away,D,2024
+2025-01-19,14:00:00,Sunday,Everton,Tottenham,3,2,2.56089,1.35719,home,W,2024
+2025-01-19,14:00:00,Sunday,Tottenham,Everton,2,3,1.35719,2.56089,away,L,2024
+2025-01-19,14:00:00,Sunday,Manchester United,Brighton,1,3,1.31823,2.17172,home,L,2024
+2025-01-19,14:00:00,Sunday,Brighton,Manchester United,3,1,2.17172,1.31823,away,W,2024
+2025-01-19,14:00:00,Sunday,Nottingham Forest,Southampton,3,2,2.36419,1.25922,home,W,2024
+2025-01-19,14:00:00,Sunday,Southampton,Nottingham Forest,2,3,1.25922,2.36419,away,L,2024
+2025-01-19,16:30:00,Sunday,Ipswich,Manchester City,0,6,0.795637,3.20228,home,L,2024
+2025-01-19,16:30:00,Sunday,Manchester City,Ipswich,6,0,3.20228,0.795637,away,W,2024
+2025-01-20,20:00:00,Monday,Chelsea,Wolverhampton Wanderers,3,1,3.14882,1.06726,home,W,2024
+2025-01-20,20:00:00,Monday,Wolverhampton Wanderers,Chelsea,1,3,1.06726,3.14882,away,L,2024
+2025-01-25,15:00:00,Saturday,Bournemouth,Nottingham Forest,5,0,2.8254,0.996166,home,W,2024
+2025-01-25,15:00:00,Saturday,Nottingham Forest,Bournemouth,0,5,0.996166,2.8254,away,L,2024
+2025-01-25,15:00:00,Saturday,Brighton,Everton,0,1,0.64378,0.870883,home,L,2024
+2025-01-25,15:00:00,Saturday,Everton,Brighton,1,0,0.870883,0.64378,away,W,2024
+2025-01-25,15:00:00,Saturday,Liverpool,Ipswich,4,1,2.16809,0.804707,home,W,2024
+2025-01-25,15:00:00,Saturday,Ipswich,Liverpool,1,4,0.804707,2.16809,away,L,2024
+2025-01-25,15:00:00,Saturday,Southampton,Newcastle United,1,3,0.825621,3.08319,home,L,2024
+2025-01-25,15:00:00,Saturday,Newcastle United,Southampton,3,1,3.08319,0.825621,away,W,2024
+2025-01-25,15:00:00,Saturday,Wolverhampton Wanderers,Arsenal,0,1,0.514724,0.887358,home,L,2024
+2025-01-25,15:00:00,Saturday,Arsenal,Wolverhampton Wanderers,1,0,0.887358,0.514724,away,W,2024
+2025-01-25,17:30:00,Saturday,Manchester City,Chelsea,3,1,2.23213,1.49843,home,W,2024
+2025-01-25,17:30:00,Saturday,Chelsea,Manchester City,1,3,1.49843,2.23213,away,L,2024
+2025-01-26,14:00:00,Sunday,Crystal Palace,Brentford,1,2,1.23177,1.92037,home,L,2024
+2025-01-26,14:00:00,Sunday,Brentford,Crystal Palace,2,1,1.92037,1.23177,away,W,2024
+2025-01-26,14:00:00,Sunday,Tottenham,Leicester,1,2,1.27483,1.40469,home,L,2024
+2025-01-26,14:00:00,Sunday,Leicester,Tottenham,2,1,1.40469,1.27483,away,W,2024
+2025-01-26,16:30:00,Sunday,Aston Villa,West Ham,1,1,0.907851,1.67886,home,D,2024
+2025-01-26,16:30:00,Sunday,West Ham,Aston Villa,1,1,1.67886,0.907851,away,D,2024
+2025-01-26,19:00:00,Sunday,Fulham,Manchester United,0,1,0.560571,0.201988,home,L,2024
+2025-01-26,19:00:00,Sunday,Manchester United,Fulham,1,0,0.201988,0.560571,away,W,2024
+2025-02-01,12:30:00,Saturday,Nottingham Forest,Brighton,7,0,4.0677,0.756296,home,W,2024
+2025-02-01,12:30:00,Saturday,Brighton,Nottingham Forest,0,7,0.756296,4.0677,away,L,2024
+2025-02-01,15:00:00,Saturday,Bournemouth,Liverpool,0,2,1.65273,2.7219,home,L,2024
+2025-02-01,15:00:00,Saturday,Liverpool,Bournemouth,2,0,2.7219,1.65273,away,W,2024
+2025-02-01,15:00:00,Saturday,Everton,Leicester,4,0,3.11261,0.447136,home,W,2024
+2025-02-01,15:00:00,Saturday,Leicester,Everton,0,4,0.447136,3.11261,away,L,2024
+2025-02-01,15:00:00,Saturday,Ipswich,Southampton,1,2,1.94845,1.17566,home,L,2024
+2025-02-01,15:00:00,Saturday,Southampton,Ipswich,2,1,1.17566,1.94845,away,W,2024
+2025-02-01,15:00:00,Saturday,Newcastle United,Fulham,1,2,1.22716,1.60881,home,L,2024
+2025-02-01,15:00:00,Saturday,Fulham,Newcastle United,2,1,1.60881,1.22716,away,W,2024
+2025-02-01,17:30:00,Saturday,Wolverhampton Wanderers,Aston Villa,2,0,2.00146,0.742809,home,W,2024
+2025-02-01,17:30:00,Saturday,Aston Villa,Wolverhampton Wanderers,0,2,0.742809,2.00146,away,L,2024
+2025-02-02,14:00:00,Sunday,Brentford,Tottenham,0,2,1.66475,0.945355,home,L,2024
+2025-02-02,14:00:00,Sunday,Tottenham,Brentford,2,0,0.945355,1.66475,away,W,2024
+2025-02-02,14:00:00,Sunday,Manchester United,Crystal Palace,0,2,1.50706,2.44633,home,L,2024
+2025-02-02,14:00:00,Sunday,Crystal Palace,Manchester United,2,0,2.44633,1.50706,away,W,2024
+2025-02-02,16:30:00,Sunday,Arsenal,Manchester City,5,1,1.53202,0.743191,home,W,2024
+2025-02-02,16:30:00,Sunday,Manchester City,Arsenal,1,5,0.743191,1.53202,away,L,2024
+2025-02-03,20:00:00,Monday,Chelsea,West Ham,2,1,1.39066,1.1868,home,W,2024
+2025-02-03,20:00:00,Monday,West Ham,Chelsea,1,2,1.1868,1.39066,away,L,2024
+2025-02-12,19:30:00,Wednesday,Everton,Liverpool,2,2,0.910523,0.929103,home,D,2024
+2025-02-12,19:30:00,Wednesday,Liverpool,Everton,2,2,0.929103,0.910523,away,D,2024
+2025-02-14,20:00:00,Friday,Brighton,Chelsea,3,0,2.06892,0.649788,home,W,2024
+2025-02-14,20:00:00,Friday,Chelsea,Brighton,0,3,0.649788,2.06892,away,L,2024
+2025-02-15,12:30:00,Saturday,Leicester,Arsenal,0,2,0.233209,1.75,home,L,2024
+2025-02-15,12:30:00,Saturday,Arsenal,Leicester,2,0,1.75,0.233209,away,W,2024
+2025-02-15,15:00:00,Saturday,Aston Villa,Ipswich,1,1,2.89841,0.332864,home,D,2024
+2025-02-15,15:00:00,Saturday,Ipswich,Aston Villa,1,1,0.332864,2.89841,away,D,2024
+2025-02-15,15:00:00,Saturday,Fulham,Nottingham Forest,2,1,2.20993,0.331301,home,W,2024
+2025-02-15,15:00:00,Saturday,Nottingham Forest,Fulham,1,2,0.331301,2.20993,away,L,2024
+2025-02-15,15:00:00,Saturday,Manchester City,Newcastle United,4,0,2.12004,0.157211,home,W,2024
+2025-02-15,15:00:00,Saturday,Newcastle United,Manchester City,0,4,0.157211,2.12004,away,L,2024
+2025-02-15,15:00:00,Saturday,Southampton,Bournemouth,1,3,0.974418,2.08722,home,L,2024
+2025-02-15,15:00:00,Saturday,Bournemouth,Southampton,3,1,2.08722,0.974418,away,W,2024
+2025-02-15,15:00:00,Saturday,West Ham,Brentford,0,1,0.673466,1.96499,home,L,2024
+2025-02-15,15:00:00,Saturday,Brentford,West Ham,1,0,1.96499,0.673466,away,W,2024
+2025-02-15,17:30:00,Saturday,Crystal Palace,Everton,1,2,2.30646,1.01565,home,L,2024
+2025-02-15,17:30:00,Saturday,Everton,Crystal Palace,2,1,1.01565,2.30646,away,W,2024
+2025-02-16,14:00:00,Sunday,Liverpool,Wolverhampton Wanderers,2,1,1.86758,1.05329,home,W,2024
+2025-02-16,14:00:00,Sunday,Wolverhampton Wanderers,Liverpool,1,2,1.05329,1.86758,away,L,2024
+2025-02-16,16:30:00,Sunday,Tottenham,Manchester United,1,0,1.97109,1.42652,home,W,2024
+2025-02-16,16:30:00,Sunday,Manchester United,Tottenham,0,1,1.42652,1.97109,away,L,2024
+2025-02-19,15:00:00,Wednesday,Aston Villa,Liverpool,2,2,1.02269,2.04279,home,D,2024
+2025-02-19,15:00:00,Wednesday,Liverpool,Aston Villa,2,2,2.04279,1.02269,away,D,2024
+2025-02-21,20:00:00,Friday,Leicester,Brentford,0,4,0.727901,2.03465,home,L,2024
+2025-02-21,20:00:00,Friday,Brentford,Leicester,4,0,2.03465,0.727901,away,W,2024
+2025-02-22,12:30:00,Saturday,Everton,Manchester United,2,2,2.10444,0.645685,home,D,2024
+2025-02-22,12:30:00,Saturday,Manchester United,Everton,2,2,0.645685,2.10444,away,D,2024
+2025-02-22,15:00:00,Saturday,Bournemouth,Wolverhampton Wanderers,0,1,0.629691,2.10124,home,L,2024
+2025-02-22,15:00:00,Saturday,Wolverhampton Wanderers,Bournemouth,1,0,2.10124,0.629691,away,W,2024
+2025-02-22,15:00:00,Saturday,Arsenal,West Ham,0,1,1.37264,1.02684,home,L,2024
+2025-02-22,15:00:00,Saturday,West Ham,Arsenal,1,0,1.02684,1.37264,away,W,2024
+2025-02-22,15:00:00,Saturday,Fulham,Crystal Palace,0,2,0.23426,1.46203,home,L,2024
+2025-02-22,15:00:00,Saturday,Crystal Palace,Fulham,2,0,1.46203,0.23426,away,W,2024
+2025-02-22,15:00:00,Saturday,Ipswich,Tottenham,1,4,1.15389,1.58741,home,L,2024
+2025-02-22,15:00:00,Saturday,Tottenham,Ipswich,4,1,1.58741,1.15389,away,W,2024
+2025-02-22,15:00:00,Saturday,Southampton,Brighton,0,4,0.154147,5.12018,home,L,2024
+2025-02-22,15:00:00,Saturday,Brighton,Southampton,4,0,5.12018,0.154147,away,W,2024
+2025-02-22,17:30:00,Saturday,Aston Villa,Chelsea,2,1,2.69413,2.17418,home,W,2024
+2025-02-22,17:30:00,Saturday,Chelsea,Aston Villa,1,2,2.17418,2.69413,away,L,2024
+2025-02-23,14:00:00,Sunday,Newcastle United,Nottingham Forest,4,3,3.45858,2.38603,home,W,2024
+2025-02-23,14:00:00,Sunday,Nottingham Forest,Newcastle United,3,4,2.38603,3.45858,away,L,2024
+2025-02-23,16:30:00,Sunday,Manchester City,Liverpool,0,2,0.558203,0.800048,home,L,2024
+2025-02-23,16:30:00,Sunday,Liverpool,Manchester City,2,0,0.800048,0.558203,away,W,2024
