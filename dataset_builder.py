@@ -1,22 +1,39 @@
 import sys
 import understatapi
+import asyncio
+import json
+import aiohttp
 import pandas as pd
 from datetime import datetime
 from build_sportsmonks import build_sportsmonks_data
+from understat import Understat
 
 class DatasetBuilder:
     def __init__(self, league="EPL", season="2024"):
         self.league = league
         self.season = season
+    
+    async def get_match_stats(self, match_id):
+        """
+        Fetch detailed match statistics for a given match ID
+        """
+        async with aiohttp.ClientSession() as session:
+            understat = Understat(session)
+            try:
+                match_stats = await understat.get_match_stats(match_id)
+                return match_stats
+            except Exception as e:
+                print(f"Error fetching match stats for match {match_id}: {e}")
+                return None
 
-    def build_understat_data(self):
+    async def build_understat_data(self):
         """
         Builds a dataset from Understat API data.
         Returns a DataFrame with match data from both home and away team perspectives.
         """
-        understat = understatapi.UnderstatClient()
+        under_stat = understatapi.UnderstatClient()
         try:
-            matches = understat.league(league=self.league).get_match_data(season=self.season)
+            matches = under_stat.league(league=self.league).get_match_data(season=self.season)
         except Exception as e:
             print(f"Error fetching data: {e}")
             return pd.DataFrame()
@@ -32,7 +49,7 @@ class DatasetBuilder:
             # Create base match data that's same for both teams
             base_data = {
                 "date": dt.strftime("%Y-%m-%d"),
-                "time": dt.strftime("%H:%M:%S"),
+                "time": dt.strftime("%H:%M"),
                 "day": dt.strftime("%A"),
                 "season": self.season
             }
@@ -50,17 +67,41 @@ class DatasetBuilder:
             else:
                 home_result = away_result = 'D'
             
+            # Get detailed match statistics
+            match_stats = await self.get_match_stats(match["id"])
+            
+            # Extract statistics if available
+            stats = {}
+            if match_stats:
+                try:
+                    stats = {
+                        'home_shots': int(match_stats.get('h_shot', 0)),
+                        'away_shots': int(match_stats.get('a_shot', 0)),
+                        'home_shots_on_target': int(match_stats.get('h_shotOnTarget', 0)),
+                        'away_shots_on_target': int(match_stats.get('a_shotOnTarget', 0)),
+                        'home_deep': int(match_stats.get('h_deep', 0)),
+                        'away_deep': int(match_stats.get('a_deep', 0)),
+                        'home_ppda': float(match_stats.get('h_ppda', 0)),
+                        'away_ppda': float(match_stats.get('a_ppda', 0))
+                    }
+                except Exception as e:
+                    print(f"Error processing match stats for match {match['id']}: {e}")
+            
             # Home team row
             home_row = base_data.copy()
             home_row.update({
-                "team": match["h"]["title"],
+                "team": match["h"]["title"], # short title for better embedding?
                 "opponent": match["a"]["title"],
                 "gf": home_goals,
                 "ga": away_goals,
                 "xg": float(match["xG"]["h"]),
                 "xga": float(match["xG"]["a"]),
                 "venue": "home",
-                "result": home_result
+                "result": home_result,
+                "shots": stats.get('home_shots', 0),
+                "shots_on_target": stats.get('home_shots_on_target', 0),
+                "deep": stats.get('home_deep', 0),
+                "ppda": stats.get('home_ppda', 0)
             })
             rows.append(home_row)
             
@@ -74,7 +115,11 @@ class DatasetBuilder:
                 "xg": float(match["xG"]["a"]),
                 "xga": float(match["xG"]["h"]),
                 "venue": "away",
-                "result": away_result
+                "result": away_result,
+                "shots": stats.get('away_shots', 0),
+                "shots_on_target": stats.get('away_shots_on_target', 0),
+                "deep": stats.get('away_deep', 0),
+                "ppda": stats.get('away_ppda', 0)
             })
             rows.append(away_row)
         
@@ -85,10 +130,11 @@ class DatasetBuilder:
         return pd.DataFrame(rows, columns=[
             "date", "time", "day", "team", "opponent",
             "gf", "ga", "xg", "xga",
-            "venue", "result", "season"
+            "venue", "result", "shots", "shots_on_target",
+            "deep", "ppda", "season"
         ])
 
-    def build_offline(self):
+    async def build_offline_async(self):
         """
         Builds the latest dataset.
         Final prediction model will have three parts:
@@ -99,13 +145,19 @@ class DatasetBuilder:
         this build function will be the dataset for the classic ML model and the deep learning model
         """
         print('Building the latest dataset...')
-        df = self.build_understat_data()
-        # df = build_sportsmonks_data()
+        df = await self.build_understat_data()
         if not df.empty:
             df.to_csv(f'{self.league}_data_{self.season}.csv', index=False)
             print('Dataset built successfully.')
         else:
             print('No data to save.')
+
+    def build_offline(self):
+        """
+        Synchronous wrapper for build_offline_async
+        """
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(self.build_offline_async())
 
     def build_online(self):
         """
