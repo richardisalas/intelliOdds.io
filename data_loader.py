@@ -165,7 +165,7 @@ class DataLoader:
                                        season_matches: int = 38) -> pd.DataFrame:
         """
         Load preprocessed data if it exists, otherwise create and save it.
-        This method combines time series and advanced features creation.
+        This method follows a sequential approach that avoids duplicating calculations.
         
         Args:
             small_window (int): Size of small rolling window (default: 3)
@@ -196,38 +196,29 @@ class DataLoader:
         if self.data is None:
             self.load_data()
             
-        # Create time series features
+        # Step 1: First create time series features
         print("Creating time series features...")
-        df_with_time_series = self.create_time_series_features(
+        df_with_features = self.create_time_series_features(
             small_window=small_window,
             window=window
         )
         
-        # Create advanced features
+        # Step 2: Pass that DataFrame to the advanced features method
         print("Creating advanced features...")
-        df_with_advanced = self.create_advanced_features(
+        final_df = self.create_advanced_features(
+            df=df_with_features,
             small_window=small_window,
             window=window,
             season_matches=season_matches
         )
         
-        # Combine all features
-        # Keep all columns from time series features and only new columns from advanced features
-        existing_cols = set(df_with_time_series.columns)
-        new_advanced_cols = [col for col in df_with_advanced.columns if col not in existing_cols]
-        
-        final_df = pd.concat([
-            df_with_time_series,
-            df_with_advanced[new_advanced_cols]
-        ], axis=1)
-        
         # Save the preprocessed data
         self.save_preprocessed_data(final_df)
         
         return final_df
-        
+
     def preprocess_data(self, 
-                       feature_groups: Optional[List[str]] = None,
+                       feature_groups: Optional[List[str]] = ['basic', 'match_stats', 'advanced_stats', 'temporal', 'lineup'],
                        additional_features: Optional[List[str]] = None,
                        exclude_features: Optional[List[str]] = None,
                        target_variable: str = 'result',
@@ -238,6 +229,7 @@ class DataLoader:
         
         Args:
             feature_groups (List[str], optional): Groups of features to include
+                                                    (default: all available feature groups)
             additional_features (List[str], optional): Additional individual features to include
             exclude_features (List[str], optional): Features to exclude
             target_variable (str): Target variable for prediction (default: 'result')
@@ -325,6 +317,18 @@ class DataLoader:
             # Create a separate DataFrame for calculations to avoid leakage
             team_calc = team_data.copy()
             
+            # Convert result to points: W=3, D=1, L=0
+            team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
+
+            # Calculate cumulative sum of points
+            team_calc['cumulative_points'] = team_calc['match_points'].cumsum()
+
+            # Shift to ensure we only use past matches (avoid data leakage)
+            team_calc['cumulative_points'] = team_calc['cumulative_points'].shift(1)
+
+            # First match should have 0 points
+            team_calc['cumulative_points'] = team_calc['cumulative_points'].fillna(0)
+            
             # Calculate rolling averages with both window sizes
             for feature in self.numerical_features:
                 # Small window rolling average
@@ -339,35 +343,6 @@ class DataLoader:
                     window=window, min_periods=1).mean().shift(1)
                 team_calc[std_col_name] = team_calc[std_col_name].fillna(0)
                 
-            # Calculate form based on past matches for both window sizes
-            # Small window form
-            team_calc[f'recent_form_{small_window}'] = team_calc['result'].rolling(
-                window=small_window, min_periods=1).apply(
-                lambda x: sum(1 for r in x if r == 'W') / len(x)).shift(1)
-            team_calc[f'recent_form_{small_window}'] = team_calc[f'recent_form_{small_window}'].fillna(0)
-            
-            # Standard window form
-            team_calc[f'recent_form_{window}'] = team_calc['result'].rolling(
-                window=window, min_periods=1).apply(
-                lambda x: sum(1 for r in x if r == 'W') / len(x)).shift(1)
-            team_calc[f'recent_form_{window}'] = team_calc[f'recent_form_{window}'].fillna(0)
-            
-            # Convert result to points: W=3, D=1, L=0
-            team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
-            
-            # Calculate cumulative sum of points
-            team_calc['cumulative_points'] = team_calc['match_points'].cumsum()
-            
-            # Shift to ensure we only use past matches (avoid data leakage)
-            team_calc['cumulative_points'] = team_calc['cumulative_points'].shift(1)
-            
-            # First match should have 0 points
-            team_calc['cumulative_points'] = team_calc['cumulative_points'].fillna(0)
-            
-            # Calculate points per match (average points)
-            team_calc['points_per_match'] = team_calc['cumulative_points'] / \
-                                        team_calc.index.to_series().groupby(team_calc.index).cumcount().fillna(1)
-            
             # Calculate recent points in last 3 and 5 matches
             team_calc[f'points_last_{small_window}'] = team_calc['match_points'].rolling(
                 window=small_window, min_periods=1).sum().shift(1)
@@ -422,13 +397,15 @@ class DataLoader:
         
         return dict(sorted(importance_dict.items(), key=lambda x: x[1], reverse=True))
 
-    def create_advanced_features(self, small_window: int = 3, window: int = 5, season_matches: int = 38) -> pd.DataFrame:
+    def create_advanced_features(self, df: Optional[pd.DataFrame] = None, small_window: int = 3, 
+                               window: int = 5, season_matches: int = 38) -> pd.DataFrame:
         """
         Create advanced analytical features for football match prediction.
-        These features leverage sophisticated football analytics concepts.
+        Can either start with raw data or build upon an existing DataFrame with time series features.
         All calculations use ONLY past data to avoid data leakage.
         
         Args:
+            df (pd.DataFrame, optional): Existing DataFrame with time series features
             small_window (int): Size of small rolling window (default: 3)
             window (int): Size of standard rolling window (default: 5)
             season_matches (int): Total matches in a season (default: 38)
@@ -436,14 +413,22 @@ class DataLoader:
         Returns:
             pd.DataFrame: DataFrame with advanced analytical features
         """
-        if self.data is None:
-            self.load_data()
+        # If no DataFrame is provided, start with raw data
+        if df is None:
+            if self.data is None:
+                self.load_data()
+            df = self.data.copy()
+            # Calculate cumulative points as needed for advanced features
+            df = self._calculate_basic_time_features(df)
+        else:
+            # Make a copy to avoid modifying the original
+            df = df.copy()
             
-        df = self.data.copy()
         df['date'] = pd.to_datetime(df['date'])
         
         # Pre-calculate goal differential for all matches
-        df['goal_diff'] = df['gf'] - df['ga']
+        if 'goal_diff' not in df.columns:
+            df['goal_diff'] = df['gf'] - df['ga']
         
         # Group by team and create advanced features from PAST matches only
         advanced_features = []
@@ -453,6 +438,14 @@ class DataLoader:
             
             # Create a separate DataFrame for calculations to avoid leakage
             team_calc = team_data.copy()
+            
+            # We don't need to recalculate cumulative_points if it exists
+            if 'cumulative_points' not in team_calc.columns:
+                # Calculate cumulative points
+                team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
+                team_calc['cumulative_points'] = team_calc['match_points'].cumsum()
+                team_calc['cumulative_points'] = team_calc['cumulative_points'].shift(1)
+                team_calc['cumulative_points'] = team_calc['cumulative_points'].fillna(0)
             
             # 1. Goal Difference Momentum
             # Calculate rolling goal differentials
@@ -474,8 +467,9 @@ class DataLoader:
             team_calc['is_home'] = (team_calc['venue'] == 'home').astype(int)
             team_calc['is_away'] = (team_calc['venue'] == 'away').astype(int)
             
-            # Calculate points for each match
-            team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
+            # Use existing match_points if available, otherwise calculate
+            if 'match_points' not in team_calc.columns:
+                team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
             
             # Calculate home and away points separately
             team_calc['home_points'] = team_calc['match_points'] * team_calc['is_home']
@@ -509,7 +503,7 @@ class DataLoader:
             
             # 3. Match Importance Coefficient
             # Calculate match number within the season
-            team_calc['match_number'] = team_calc.groupby(pd.Grouper(key='date', freq='Y')).cumcount() + 1
+            team_calc['match_number'] = team_calc.groupby(pd.Grouper(key='date', freq='YE')).cumcount() + 1
             
             # Calculate remaining matches in the season
             team_calc['remaining_matches'] = season_matches - team_calc['match_number']
@@ -574,7 +568,7 @@ class DataLoader:
         result_df = result_df.sort_index()
         
         return result_df
-    
+
     def _calculate_gd_slope(self, team_history, window):
         """
         Calculate the slope of recent goal differentials to measure momentum.
@@ -664,6 +658,50 @@ class DataLoader:
             # If not found (shouldn't happen for completed matches)
             return 7  # Default to a week 
 
+    def _calculate_basic_time_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Helper method to calculate basic time features needed for advanced features.
+        This is used when create_advanced_features is called directly without time series features.
+        
+        Args:
+            df (pd.DataFrame): Input DataFrame
+            
+        Returns:
+            pd.DataFrame: DataFrame with basic time features added
+        """
+        result_df = df.copy()
+        
+        # Group by team and create basic features
+        new_features = []
+        for team in result_df['team'].unique():
+            # Get data for this team and sort by date
+            team_data = result_df[result_df['team'] == team].sort_values('date')
+            
+            # Create a separate DataFrame for calculations
+            team_calc = team_data.copy()
+            
+            # Convert result to points: W=3, D=1, L=0
+            team_calc['match_points'] = team_calc['result'].map({'W': 3, 'D': 1, 'L': 0})
+
+            # Calculate cumulative sum of points
+            team_calc['cumulative_points'] = team_calc['match_points'].cumsum()
+
+            # Shift to ensure we only use past matches (avoid data leakage)
+            team_calc['cumulative_points'] = team_calc['cumulative_points'].shift(1)
+
+            # First match should have 0 points
+            team_calc['cumulative_points'] = team_calc['cumulative_points'].fillna(0)
+            
+            new_features.append(team_calc)
+            
+        # Combine all teams back together
+        result_df = pd.concat(new_features)
+        
+        # Sort back to original order
+        result_df = result_df.sort_index()
+        
+        return result_df
+
 # Add main function for command line use
 def main():
     """
@@ -684,28 +722,12 @@ def main():
                         help='League name (default: EPL)')
     parser.add_argument('--season', type=str, default='2024',
                         help='Season year (default: 2024)')
-    parser.add_argument('--feature_groups', nargs='+', default=None,
-                        help='Feature groups to include (e.g., basic match_stats advanced_stats)')
-    parser.add_argument('--additional_features', nargs='+', default=None,
-                        help='Additional individual features to include')
-    parser.add_argument('--exclude_features', nargs='+', default=None,
-                        help='Features to exclude')
-    parser.add_argument('--target_variable', type=str, default='result',
-                        help='Target variable for prediction (default: result)')
-    parser.add_argument('--no_scaling', action='store_true',
-                        help='Disable feature scaling')
-    parser.add_argument('--force_reprocess', action='store_true',
-                        help='Force reprocessing even if preprocessed data exists')
-    parser.add_argument('--output_file', type=str, default=None,
-                        help='Path to save the preprocessed data (default: none)')
-    parser.add_argument('--list_features', action='store_true',
-                        help='List all available features and exit')
     parser.add_argument('--small_window', type=int, default=3,
-                        help='Size of small rolling window for features (default: 3)')
+                        help='Size of the small rolling window (default: 3)')
     parser.add_argument('--window', type=int, default=5,
-                        help='Size of standard rolling window for features (default: 5)')
-    parser.add_argument('--season_matches', type=int, default=38,
-                        help='Total matches in a season (default: 38)')
+                        help='Size of the standard rolling window (default: 5)')
+    parser.add_argument('--output_file', type=str, default=None,
+                        help='Optional path to save preprocessed data')
     
     # Parse arguments
     args = parser.parse_args()
@@ -717,47 +739,20 @@ def main():
         season=args.season
     )
     
-    # If user just wants to list available features
-    if args.list_features:
-        feature_groups = loader.get_available_features()
-        print("\nAvailable Feature Groups:")
-        for group, features in feature_groups.items():
-            print(f"\n{group.upper()}:")
-            for feature in features:
-                print(f"  - {feature}")
-        return
-    
     print(f"Loading and preprocessing data for {args.league} {args.season}...")
     
-    # If creating preprocessed data with custom windows
-    if args.small_window != 3 or args.window != 5 or args.season_matches != 38:
-        print(f"Creating preprocessed data with custom parameters: small_window={args.small_window}, "
-              f"window={args.window}, season_matches={args.season_matches}")
-        preprocessed_data = loader.load_or_create_preprocessed_data(
-            small_window=args.small_window,
-            window=args.window,
-            season_matches=args.season_matches
-        )
-    
     # Preprocess the data
-    X, y = loader.preprocess_data(
-        feature_groups=args.feature_groups,
-        additional_features=args.additional_features,
-        exclude_features=args.exclude_features,
-        target_variable=args.target_variable,
-        scale_features=not args.no_scaling,
-        force_reprocess=args.force_reprocess
-    )
+    X, y = loader.preprocess_data()
     
     print(f"\nPreprocessing complete!")
     print(f"Features shape: {X.shape}")
     print(f"Target shape: {y.shape}")
     
     # If output file is specified, save the preprocessed data
-    if args.output_file:
+    if hasattr(args, 'output_file') and args.output_file:
         # Combine features and target into one DataFrame
         output_df = pd.DataFrame(X)
-        output_df[args.target_variable] = y
+        output_df['result'] = y  # Use 'result' as the default target variable
         
         # Save to file
         output_df.to_csv(args.output_file, index=False)
