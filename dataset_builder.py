@@ -1,12 +1,12 @@
 import sys
 import understatapi
 import asyncio
-import json
 import aiohttp
 import pandas as pd
 from datetime import datetime
-from build_sportsmonks import build_sportsmonks_data
 from understat import Understat
+import unicodedata
+import html
 
 class DatasetBuilder:
     def __init__(self, league="EPL", season="2024"):
@@ -25,6 +25,130 @@ class DatasetBuilder:
             except Exception as e:
                 print(f"Error fetching match stats for match {match_id}: {e}")
                 return None
+
+    def analyze_close_shots(self, shots_data, team_type):
+        """
+        Analyze shots within 20 meters of goal.
+        Args:
+            shots_data (dict): Dictionary containing shot data
+            team_type (str): 'h' for home or 'a' for away
+        Returns:
+            tuple: (number of close shots, number of close shots on target)
+        """
+        close_shots = 0
+        close_shots_on_target = 0
+        
+        # Convert 20 meters to X coordinate (pitch coordinates are normalized)
+        CLOSE_SHOT_THRESHOLD = 0.8  # 20 meters from goal is approximately 0.8 in normalized coordinates
+        
+        for shot in shots_data[team_type]:
+            shot_x = float(shot['X'])
+            # Check if shot is within 20 meters
+            if shot_x >= CLOSE_SHOT_THRESHOLD:
+                close_shots += 1
+                # Check if shot was on target
+                if shot['result'] in ['Goal', 'SavedShot']:
+                    close_shots_on_target += 1
+        
+        return close_shots, close_shots_on_target
+
+    def analyze_roster_data(self, roster_data, team_side):
+        """
+        Analyzes roster data for a specific team (home 'h' or away 'a')
+        Returns a dictionary of aggregated team statistics
+        """
+        team_data = roster_data.get(team_side, {})
+        
+        # Initialize aggregates
+        total_xGChain = 0
+        total_xGBuildup = 0
+        total_key_passes = 0
+        total_xA = 0
+        yellow_cards = 0
+        red_cards = 0
+        substitutions = 0
+        
+        # Track starting XI stats
+        starting_xi_count = 0
+        avg_position_order = 0
+        
+        for player in team_data.values():
+            # Sum up team totals
+            total_xGChain += float(player.get('xGChain', 0))
+            total_xGBuildup += float(player.get('xGBuildup', 0))
+            total_key_passes += int(player.get('key_passes', 0))
+            total_xA += float(player.get('xA', 0))
+            yellow_cards += int(player.get('yellow_card', 0))
+            red_cards += int(player.get('red_card', 0))
+            
+            # Count substitutions
+            if player.get('roster_in') != '0' or player.get('roster_out') != '0':
+                substitutions += 1
+            
+            # Track starting XI
+            if player.get('roster_in') == '0' and player.get('position') != 'Sub':
+                starting_xi_count += 1
+                avg_position_order += float(player.get('positionOrder', 0))
+        
+        # Calculate average position order for starting XI
+        avg_position_order = avg_position_order / starting_xi_count if starting_xi_count > 0 else 0
+        
+        return {
+            'xGChain': total_xGChain,
+            'xGBuildup': total_xGBuildup,
+            'key_passes': total_key_passes,
+            'xA': total_xA,
+            'yellow_cards': yellow_cards,
+            'red_cards': red_cards,
+            'substitutions': substitutions // 2,  # Divide by 2 since each sub counts as in/out
+            'avg_position_order': avg_position_order
+        }
+
+    def decode_and_remove_accents(self, input_str):
+        # 1) Decode HTML entities like &#039; -> '
+        decoded_str = html.unescape(input_str)
+
+        # 2) Normalize and strip accents if there are any
+        normalized_str = unicodedata.normalize('NFKD', decoded_str)
+        ascii_str = normalized_str.encode('ASCII', 'ignore').decode('ASCII')
+
+        return ascii_str
+
+    def get_starting_xi(self, roster_data, team_side):
+        """
+        Extracts the starting XI players in order of their position (GK first, then outfield players).
+        Args:
+            roster_data (dict): The roster data dictionary
+            team_side (str): 'h' for home or 'a' for away
+        Returns:
+            dict: Dictionary with GK and player_1 through player_10 keys
+        """
+        team_data = roster_data.get(team_side, {})
+        starting_xi = []
+
+        # Get all players (up to 11)
+        for player in team_data.values():
+            starting_xi.append({
+                'name': self.decode_and_remove_accents(player.get('player', '')),
+                'position_order': float(player.get('positionOrder', 99))
+            })
+            if len(starting_xi) == 11:  # Limit to 11 players
+                break
+
+        # Sort players by position order
+        starting_xi.sort(key=lambda x: x['position_order'])
+
+        # Create the result dictionary
+        result = {}
+        
+        # Assign the first player as the goalkeeper
+        result['GK'] = starting_xi[0]['name'] if starting_xi else 'Unknown'
+        
+        # Assign the next 10 players as outfield players
+        for i in range(1, 11):
+            result[f'player_{i}'] = starting_xi[i]['name'] if i < len(starting_xi) else 'Unknown'
+        
+        return result
 
     async def build_understat_data(self):
         """
@@ -67,6 +191,22 @@ class DatasetBuilder:
             else:
                 home_result = away_result = 'D'
             
+            # Get roster data and analyze it
+            roster_data = under_stat.match(match["id"]).get_roster_data()
+            home_roster_stats = self.analyze_roster_data(roster_data, 'h')
+            away_roster_stats = self.analyze_roster_data(roster_data, 'a')
+            
+            # Get starting XI for both teams
+            home_starting_xi = self.get_starting_xi(roster_data, 'h')
+            away_starting_xi = self.get_starting_xi(roster_data, 'a')
+
+            # Get shot data
+            shot_data = under_stat.match(match["id"]).get_shot_data()
+            
+            # Analyze close shots for both teams
+            home_close_shots, home_close_shots_on_target = self.analyze_close_shots(shot_data, 'h')
+            away_close_shots, away_close_shots_on_target = self.analyze_close_shots(shot_data, 'a')
+
             # Get detailed match statistics
             match_stats = await self.get_match_stats(match["id"])
             
@@ -90,7 +230,7 @@ class DatasetBuilder:
             # Home team row
             home_row = base_data.copy()
             home_row.update({
-                "team": match["h"]["title"], # short title for better embedding?
+                "team": match["h"]["title"],
                 "opponent": match["a"]["title"],
                 "gf": home_goals,
                 "ga": away_goals,
@@ -101,8 +241,20 @@ class DatasetBuilder:
                 "shots": stats.get('home_shots', 0),
                 "shots_on_target": stats.get('home_shots_on_target', 0),
                 "deep": stats.get('home_deep', 0),
-                "ppda": stats.get('home_ppda', 0)
+                "ppda": stats.get('home_ppda', 0),
+                "close_shots": home_close_shots,
+                "close_shots_on_target": home_close_shots_on_target,
+                "xGChain": home_roster_stats['xGChain'],
+                "xGBuildup": home_roster_stats['xGBuildup'],
+                "key_passes": home_roster_stats['key_passes'],
+                "xA": home_roster_stats['xA'],
+                "yellow_cards": home_roster_stats['yellow_cards'],
+                "red_cards": home_roster_stats['red_cards'],
+                "substitutions": home_roster_stats['substitutions'],
+                "avg_position_order": home_roster_stats['avg_position_order']
             })
+            # Add starting XI to home row
+            home_row.update(home_starting_xi)
             rows.append(home_row)
             
             # Away team row
@@ -119,8 +271,20 @@ class DatasetBuilder:
                 "shots": stats.get('away_shots', 0),
                 "shots_on_target": stats.get('away_shots_on_target', 0),
                 "deep": stats.get('away_deep', 0),
-                "ppda": stats.get('away_ppda', 0)
+                "ppda": stats.get('away_ppda', 0),
+                "close_shots": away_close_shots,
+                "close_shots_on_target": away_close_shots_on_target,
+                "xGChain": away_roster_stats['xGChain'],
+                "xGBuildup": away_roster_stats['xGBuildup'],
+                "key_passes": away_roster_stats['key_passes'],
+                "xA": away_roster_stats['xA'],
+                "yellow_cards": away_roster_stats['yellow_cards'],
+                "red_cards": away_roster_stats['red_cards'],
+                "substitutions": away_roster_stats['substitutions'],
+                "avg_position_order": away_roster_stats['avg_position_order']
             })
+            # Add starting XI to away row
+            away_row.update(away_starting_xi)
             rows.append(away_row)
         
         if not rows:
@@ -131,7 +295,12 @@ class DatasetBuilder:
             "date", "time", "day", "team", "opponent",
             "gf", "ga", "xg", "xga",
             "venue", "result", "shots", "shots_on_target",
-            "deep", "ppda", "season"
+            "deep", "ppda", "close_shots", "close_shots_on_target",
+            "xGChain", "xGBuildup", "key_passes", "xA",
+            "yellow_cards", "red_cards", "substitutions", "avg_position_order",
+            "GK", "player_1", "player_2", "player_3", "player_4", "player_5",
+            "player_6", "player_7", "player_8", "player_9", "player_10",
+            "season"
         ])
 
     async def build_offline_async(self):
